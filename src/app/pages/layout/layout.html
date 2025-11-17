@@ -1,0 +1,75 @@
+<div class="menu-btn" id="menu-btnId" #menuBtn (click)="openSidebar()">
+  <!-- <ion-icon name="menu-outline"></ion-icon> -->
+  <fa-icon [icon]="faBars"></fa-icon>
+</div>
+
+<div class="sidebar" id="sidebarId"  #sidebar>
+  <header class="sidebar-header">
+    <div class="close-btn p-1" id="close-btnId" (click)="closeSidebar()">
+      <!-- <ion-icon name="chevron-back-circle-outline"></ion-icon> -->
+      <fa-icon [icon]="faChevronCircleLeft"></fa-icon>
+    </div>
+
+    <div class="logo">
+      <!-- <ion-icon name="person-circle-outline" class="person-icon-class"></ion-icon> -->
+      <fa-icon [icon]="faUserCircle" class="person-icon-class"></fa-icon>
+    </div>
+
+    <p class="header-title text-center">Employee Management</p>
+  </header>
+
+  <div class="menu">
+    <div class="item-container">
+      <div class="item">
+        <!-- <ion-icon name="home-outline" class="icon-class"></ion-icon> -->
+        <fa-icon [icon]="faHouse" class="icon-class"></fa-icon>
+        <a href="#" class="menu-link">Dashboard</a>
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div class="item sub-btn" data-container="toggle-1" (click)="toggleSubmenu('toggle-1', $event)">
+        <!-- <ion-icon name="grid-outline" class="icon-class"></ion-icon> -->
+        <fa-icon [icon]="faGrid" class="icon-class"></fa-icon>
+
+        <a href="#" class="menu-link">Projects</a>
+
+        <!-- <ion-icon name="chevron-forward-outline" class="dropdown"></ion-icon> -->
+        <fa-icon [icon]="faChevronRight" class="dropdown"></fa-icon>
+      </div>
+
+      <div class="sub-menu" id="toggle-1">
+        <a href="#" class="sub-menu-link">Ongoing Projects</a>
+        <a href="#" class="sub-menu-link">Completed Projects</a>
+        <a href="#" class="sub-menu-link">All Projects</a>
+      </div>
+    </div>
+
+    <div class="item-container">
+      <div class="item sub-btn" data-container="toggle-2" (click)="toggleSubmenu('toggle-2', $event)">
+        <!-- <ion-icon name="document-outline" class="icon-class"></ion-icon> -->
+        <fa-icon [icon]="faDocument" class="icon-class"></fa-icon>
+
+        <a href="#" class="menu-link">Tasks</a>
+
+        <!-- <ion-icon name="chevron-forward-outline" class="dropdown"></ion-icon> -->
+        <fa-icon [icon]="faChevronRight" class="dropdown"></fa-icon>
+      </div>
+
+      <div class="sub-menu" id="toggle-2">
+        <a href="#" class="sub-menu-link">Pending Tasks</a>
+        <a href="#" class="sub-menu-link">Completed Tasks</a>
+        <a href="#" class="sub-menu-link">All Tasks</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-content pt-5" id="mainContentId">
+  <h1>Dashboard</h1>
+  <p>
+    This is your page content. When the sidebar opens,
+    this content will move to the right.
+  </p>
+  <router-outlet></router-outlet>
+</div>

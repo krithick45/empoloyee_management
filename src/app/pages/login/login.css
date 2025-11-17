@@ -1,0 +1,155 @@
+/* ===== BACKGROUND ===== */
+.parent-login {
+  background: linear-gradient(135deg, #ffffff 0%, #f5fbff 40%, #e4f1ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(15, 76, 129, 0.12); /* soft blue shadow */
+  padding: 40px 35px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-card h3 {
+  text-align: center;
+  color: #1f3b57; /* dark blue-gray */
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+}
+
+/* ===== LOGO ===== */
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 15px rgba(107, 169, 236, 0.4); /* light blue glow */
+}
+
+.logo-circle img {
+  width: 40px;
+}
+
+/* ===== INPUTS ===== */
+.form-label {
+  color: #1f3b57; /* label text */
+}
+
+.form-control {
+  border-radius: 10px;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d4e4f7;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+.form-control::placeholder {
+  color: #9cb1c8;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6ba9ec;
+  box-shadow: 0 0 8px rgba(107, 169, 236, 0.7);
+}
+
+/* ===== BUTTON ===== */
+.btn-login {
+  width: 100%;
+  background-color: #4f8fe9; /* primary blue */
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-login:hover {
+  background-color: #3b76c6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 118, 198, 0.35);
+}
+
+/* ===== SMALL TEXT ===== */
+.text-small {
+  font-size: 0.9rem;
+  color: #4a6179;
+}
+
+.text-small a {
+  color: #3b76c6;
+  text-decoration: none;
+}
+
+.text-small a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox label etc. */
+.form-check-input {
+  border-color: #9cb1c8;
+}
+
+.form-check-input:checked {
+  background-color: #4f8fe9;
+  border-color: #4f8fe9;
+}
+
+.form-check-label {
+  color: #4a6179;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 25px;
+    max-width: 100%;
+  }
+  .login-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-circle img {
+    width: 32px;
+  }
+  .login-card {
+    padding: 25px 20px;
+  }
+  .btn-login {
+    padding: 10px;
+  }
+}
